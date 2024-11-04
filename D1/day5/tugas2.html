@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWITCH</title>
+  </head>
+  <body>
+    <h2>Pilih Bulan Berdasarkan Nomor</h2>
+    <label for="bulan">Masukkan nomor bulan (1-12):</label>
+    <input type="number" id="bulan" placeholder="Masukkan nomor bulan" />
+
+    <!-- Tombol untuk mengecek bulan yang dimasukkan -->
+    <button onclick="cekBulan()">Cek Bulan</button>
+
+    <p id="hasilBulan"></p>
+
+    <script>
+      function cekBulan() {
+        // Ambil nomor bulan dari input dengan id "bulan"
+        var nomorBulan = document.getElementById("bulan").value;
+
+        // Variabel untuk menampung hasil akhir
+        var hasil = "";
+
+        // Cek bulan menggunakan switch
+        switch (parseInt(nomorBulan)) {
+          case 1:
+            hasil = "Bulan ini adalah Januari";
+            break;
+          case 2:
+            hasil = "Bulan ini adalah Februari";
+            break;
+          case 3:
+            hasil = "Bulan ini adalah Maret";
+            break;
+          case 4:
+            hasil = "Bulan ini adalah April";
+            break;
+          case 5:
+            hasil = "Bulan ini adalah Mei";
+            break;
+          case 6:
+            hasil = "Bulan ini adalah Juni";
+            break;
+          case 7:
+            hasil = "Bulan ini adalah Juli";
+            break;
+          case 8:
+            hasil = "Bulan ini adalah Agustus";
+            break;
+          case 9:
+            hasil = "Bulan ini adalah September";
+            break;
+          case 10:
+            hasil = "Bulan ini adalah Oktober";
+            break;
+          case 11:
+            hasil = "Bulan ini adalah November";
+            break;
+          case 12:
+            hasil = "Bulan ini adalah Desember";
+            break;
+          default:
+            hasil = "Nomor bulan tidak valid. Masukkan nomor antara 1 dan 12.";
+            break;
+        }
+
+        // Tampilkan hasil ke elemen dengan id "hasilBulan"
+        document.getElementById("hasilBulan").innerHTML = hasil;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While Loop dengan Tombol Stop</title>
+  </head>
+  <body>
+    <h1>Perhitungan Angka</h1>
+    <p id="counter">Angka: 0</p>
+    <button id="stopButton">Stop</button>
+
+    <script>
+      let counterDisplay = document.getElementById("counter");
+      let stopButton = document.getElementById("stopButton");
+
+      // Inisialisasi variabel untuk angka dan kontrol loop
+      let i = 0;
+      let counting = true;
+
+      // Menggunakan setInterval untuk memperbarui angka setiap detik
+      let intervalId = setInterval(function () {
+        // Simulasi while loop: loop berjalan selama "counting" bernilai true
+        if (counting) {
+          i++;
+          counterDisplay.textContent = "Angka: " + i;
+        } else {
+          clearInterval(intervalId); // Menghentikan interval ketika counting = false
+        }
+      }, 10);
+      stopButton.addEventListener("click", function () {
+        counting = false; // Mengubah kondisi untuk menghentikan "while loop"
+      });
+    </script>
+  </body>
+</html>

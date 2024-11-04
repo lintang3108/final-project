@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Else JavaScript - Kategori Usia</title>
+  </head>
+  <body>
+    <!-- Input untuk memasukkan umur -->
+    <label for="umur">Masukkan Umur:</label>
+    <input type="number" id="umur" placeholder="Masukkan umur" />
+
+    <!-- Tombol untuk mengecek umur yang dimasukkan -->
+    <button onclick="cekUmur()">Cek Umur</button>
+
+    <!-- Elemen paragraf untuk menampilkan hasil -->
+    <p id="hasil"></p>
+
+    <script>
+      // Fungsi untuk mengecek kategori umur yang dimasukkan
+      function cekUmur() {
+        // Ambil umur dari input dengan id "umur"
+        var umur = document.getElementById("umur").value;
+
+        // Variabel untuk menampung hasil akhir
+        var hasil = "";
+
+        // Cek apakah umur lebih dari 50
+        if (umur > 50) {
+          hasil = "Tua."; // Jika ya, maka kategorinya Tua
+        }
+        // Cek apakah umur lebih dari 20 tetapi kurang atau sama dengan 50
+        else if (umur > 20) {
+          hasil = "Dewasa."; // Jika ya, maka kategorinya Dewasa
+        }
+        // Cek apakah umur lebih dari 15 tetapi kurang atau sama dengan 20
+        else if (umur > 15) {
+          hasil = "Remaja."; // Jika ya, maka kategorinya Remaja
+        }
+        // Cek apakah umur lebih dari 5 tetapi kurang atau sama dengan 15
+        else if (umur > 5) {
+          hasil = "Bocil."; // Jika ya, maka kategorinya Bocil
+        }
+        // Cek apakah umur antara 1 sampai 4
+        else if (umur >= 1 && umur <= 4) {
+          hasil = "Bayi."; // Jika ya, maka kategorinya Bayi
+        }
+        // Jika umur tidak valid (misalnya angka negatif atau kosong)
+        else {
+          hasil = "Umur tidak valid."; // Untuk nilai selain rentang di atas
+        }
+
+        // Tampilkan hasil ke elemen dengan id "hasil"
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+    </script>
+  </body>
+</html>

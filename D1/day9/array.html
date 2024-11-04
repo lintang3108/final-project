@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="tampilkanArray()">
+    <h1>Contoh Array di JavaScript</h1>
+    <p id="pertama"></p>
+    <p id="kedua"></p>
+    <p id="hapus"></p>
+    <p id="hapusPertama"></p>
+    <p id="panjang"></p>
+    <p id="semuaBuah"></p>
+    <script>
+      function tampilkanArray() {
+        var buah = ["apel", "pisang", "mangga", "Blubery"];
+
+        // Menampilkan elemen pertama dan kedua
+        document.getElementById("pertama").innerHTML =
+          "Buah pertama: " + buah[0];
+        document.getElementById("kedua").innerHTML = "Buah kedua: " + buah[1];
+
+        // Menghapus buah terakhir dari array
+        var buahHapus = buah.pop();
+        document.getElementById("hapus").innerHTML =
+          "Buah yang dihapus: " + buahHapus;
+
+        // Menghapus buah pertama dari array
+        var buahHapusPertama = buah.shift();
+        document.getElementById("hapusPertama").innerHTML =
+          "Buah pertama yang dihapus: " + buahHapusPertama;
+
+        // Menampilkan panjang array
+        document.getElementById("panjang").innerHTML =
+          "Panjang array sekarang: " + buah.length;
+
+        // Menampilkan semua buah yang tersisa dalam array
+        document.getElementById("semuaBuah").innerHTML =
+          "Buah tersisa: " + buah.join(", ");
+      }
+    </script>
+  </body>
+</html>

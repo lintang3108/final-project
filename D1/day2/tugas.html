@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>label</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: aquamarine;
+      }
+      form {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="./tabeltugas.html">
+      <label for="email">Email:</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Masukkan email . . ."
+      /><br /><br />
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Masukkan password . . ."
+      /><br /><br />
+      <input type="submit" value="Kirim" />
+    </form>
+  </body>
+</html>

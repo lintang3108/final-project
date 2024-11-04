@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Typedata JavaScript</title>
+  </head>
+  <body>
+    <h1>Belajar Typedata JavaScript</h1>
+    <p id="hasil"></p>
+
+    <script>
+      let namaLengkap = "ntang";
+      console.log("Nama lengkap: " + namaLengkap);
+
+      let usia = 18; // Tipe data number
+      console.log("Usia: " + usia);
+
+      let sudahMakan = false;
+      console.log("Sudah makan: " + sudahMakan);
+
+      let hobi = ["Membaca", "Sepak bola", "Voli", "Kepo SU"];
+      console.log("Hobi: " + hobi);
+
+      let identitas = {
+        nama: "ntang",
+        kelas: "11 TKJ",
+        usia: 18,
+      };
+      console.log("Identitas: ", identitas);
+
+      // Menampilkan informasi di elemen HTML
+      document.getElementById("hasil").innerHTML =
+        "<b>Typedata:</b><br>" +
+        "Nama Lengkap: " +
+        namaLengkap +
+        "<br>" +
+        "Usia: " +
+        usia +
+        "<br>" +
+        "Sudah makan: " +
+        sudahMakan +
+        "<br>" +
+        "Hobi: " +
+        hobi.join(", ") + // Menampilkan array hobi dipisahkan koma
+        "<br><br>" +
+        "<b>Identitas:</b><br>" +
+        "- Nama: " +
+        identitas.nama +
+        "<br>" +
+        "- Kelas: " +
+        identitas.kelas +
+        "<br>" +
+        "- Usia: " +
+        identitas.usia;
+    </script>
+  </body>
+</html>

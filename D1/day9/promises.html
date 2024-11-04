@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let promise = new Promise((resolve, reject) => {
+        let success = true; // Ganti 'succes' dengan 'success' untuk ejaan yang benar
+        setTimeout(() => {
+          if (success) {
+            resolve("Operasi berhasil");
+          } else {
+            reject("Operasi gagal"); // Tambahkan kondisi reject jika success bernilai false
+          }
+        }, 2000); // Tambahkan delay 2 detik sebelum promise selesai
+      });
+
+      // Menangani hasil dari promise
+      promise
+        .then((message) => {
+          console.log(message); // Jika resolve, tampilkan pesan 'Operasi berhasil'
+        })
+        .catch((error) => {
+          console.error(error); // Jika reject, tampilkan pesan 'Operasi gagal'
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perhitungan Mundur dengan Tombol Stop</title>
+  </head>
+  <body>
+    <h1>Perhitungan Mundur</h1>
+    <p id="counter">Angka: 10</p>
+    <button id="stopButton">Stop</button>
+
+    <script>
+      let counterDisplay = document.getElementById("counter");
+      let stopButton = document.getElementById("stopButton");
+
+      // Inisialisasi variabel untuk angka dan kontrol loop
+      let i = 100;
+      let counting = true;
+
+      // Menggunakan setInterval untuk memperbarui angka setiap detik
+      let intervalId = setInterval(function () {
+        // Simulasi while loop: loop berjalan selama "counting" bernilai true
+        if (counting && i >= 0) {
+          counterDisplay.textContent = "Angka: " + i;
+          i--;
+        }
+        if (i < 0) {
+          clearInterval(intervalId); // Menghentikan interval ketika mencapai 0
+        }
+      }, 1000);
+
+      stopButton.addEventListener("click", function () {
+        counting = false; // Mengubah kondisi untuk menghentikan "while loop"
+        clearInterval(intervalId); // Menghentikan interval ketika tombol stop ditekan
+        counterDisplay.textContent =
+          "Angka terakhir: " + (i + 1) + " (Penghitungan dihentikan)";
+      });
+    </script>
+  </body>
+</html>

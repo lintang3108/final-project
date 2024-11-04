@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Contoh Async di JavaScript</h1>
+    <p>Buka konsol (F12) untuk melihat hasilnya.</p>
+
+    <script>
+      // Fungsi untuk mengembalikan promise
+      function ambilData() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("Data Berhasil Diambil");
+          }, 2000); // Simulasi waktu tunggu 2 detik
+        });
+      }
+
+      // Fungsi async untuk mengambil data
+      async function tampilkanData() {
+        try {
+          console.log("Mengambil data...");
+          const data = await ambilData(); // Tunggu sampai data diambil
+          console.log(data); // Tampilkan data di konsol
+        } catch (error) {
+          console.error("Terjadi kesalahan:", error);
+        }
+      }
+
+      // Panggil fungsi async untuk menampilkan data
+      tampilkanData();
+    </script>
+  </body>
+</html>

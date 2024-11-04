@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Else JavaScript</title>
+  </head>
+  <body>
+    <!-- Input untuk memasukkan nilai -->
+    <label for="nilai">Masukkan Nilai:</label>
+    <input type="number" id="nilai" placeholder="Masukkan nilai" />
+
+    <!-- Tombol untuk mengecek nilai yang dimasukkan -->
+    <button onclick="cekNilai()">Cek Nilai</button>
+
+    <!-- Elemen paragraf untuk menampilkan hasil -->
+    <p id="hasil"></p>
+
+    <script>
+      // Fungsi untuk mengecek nilai yang dimasukkan
+      function cekNilai() {
+        // Ambil nilai dari input dengan id "nilai"
+        var nilai = document.getElementById("nilai").value;
+
+        // Variabel untuk menampung hasil akhir
+        var hasil = "";
+
+        // Cek apakah nilai >= 90
+        if (nilai >= 90) {
+          hasil = "Nilai kamu adalah A."; // Jika ya, maka nilainya adalah A
+        }
+        // Cek apakah nilai >= 80 tetapi kurang dari 90
+        else if (nilai >= 80) {
+          hasil = "Nilai kamu adalah B."; // Jika ya, maka nilainya adalah B
+        }
+        // Cek apakah nilai >= 70 tetapi kurang dari 80
+        else if (nilai >= 70) {
+          hasil = "Nilai kamu adalah C."; // Jika ya, maka nilainya adalah C
+        }
+        // Jika nilai kurang dari 70
+        else {
+          hasil = "Nilai kamu di bawah C."; // Nilai di bawah 70, hasilnya "di bawah C"
+        }
+
+        // Tampilkan hasil ke elemen dengan id "hasil"
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+    </script>
+  </body>
+</html>

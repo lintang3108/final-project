@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="myClass">First Element</div>
+    <div class="myClass">Second Element</div>
+    <div class="myClass">Third Element</div>
+
+    <script>
+      // Menggunakan querySelector untuk mengambil elemen pertama
+      let element = document.querySelector(".myClass");
+      console.log(element.textContent);
+
+      // Jika ingin mengambil semua elemen dengan kelas myClass
+      let elements = document.querySelectorAll(".myClass");
+      elements.forEach((el, index) => {
+        console.log(`Element ${index + 1}: ${el.textContent}`);
+      });
+    </script>
+  </body>
+</html>

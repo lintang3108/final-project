@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Paragraf untuk menampilkan hasil operasi aritmatika -->
+    <p id="hasil"></p>
+
+    <script>
+      // Nilai untuk perhitungan
+      let angka1 = 10;
+      let angka2 = 12;
+
+      // Operasi aritmatika
+      let hasil = `
+        Hasil penjumlahan: ${angka1 + angka2}<br>
+        Hasil pengurangan: ${angka1 - angka2}<br>
+        Hasil perkalian: ${angka1 * angka2}<br>
+        Hasil pembagian: ${angka1 / angka2}
+      `;
+
+      // Menampilkan hasil ke elemen paragraf
+      document.getElementById("hasil").innerHTML = hasil;
+    </script>
+  </body>
+</html>

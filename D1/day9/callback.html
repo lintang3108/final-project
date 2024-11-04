@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CallBack</title>
+    <script>
+      function prosesData(callback) {
+        console.log("Memulai proses data...");
+        // Simulasi proses yang memakan waktu menggunakan setTimeout
+        setTimeout(function () {
+          console.log("Proses selesai!");
+          callback(); // Memanggil fungsi callback setelah proses selesai
+        }, 2000); // Simulasi proses yang berlangsung selama 2 detik
+      }
+
+      function tampilkanHasil() {
+        console.log("Menampilkan hasil setelah proses selesai.");
+      }
+
+      // Panggil prosesData dan berikan tampilkanHasil sebagai callback
+      window.onload = function () {
+        prosesData(tampilkanHasil);
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Contoh CallBack Di JavaScript</h1>
+    <p>Buka konsol browser (f12) untuk melihat hasil CallBack</p>
+  </body>
+</html>

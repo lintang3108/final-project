@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="tampilkanArray()">
+    <h1>Contoh Array Hewan di JavaScript</h1>
+    <p id="pertama"></p>
+    <p id="kedua"></p>
+    <p id="tambahHewan"></p>
+    <p id="hapusTerakhir"></p>
+    <p id="hapusPertama"></p>
+    <p id="panjang"></p>
+    <p id="semuaHewan"></p>
+
+    <script>
+      function tampilkanArray() {
+        var hewan = ["Kucing", "Anjing", "Burung", "Ikan"];
+
+        // Menampilkan elemen pertama dan kedua
+        document.getElementById("pertama").innerHTML =
+          "Hewan pertama: " + hewan[0];
+        document.getElementById("kedua").innerHTML = "Hewan kedua: " + hewan[1];
+
+        // Menambahkan hewan baru menggunakan push
+        hewan.push("Kelinci");
+        document.getElementById("tambahHewan").innerHTML =
+          "Setelah menambah: " + hewan.join(", ");
+
+        // Menghapus hewan terakhir dari array menggunakan pop
+        var hewanHapus = hewan.pop();
+        document.getElementById("hapusTerakhir").innerHTML =
+          "Hewan yang dihapus (terakhir): " + hewanHapus;
+
+        // Menghapus hewan pertama dari array menggunakan shift
+        var hewanHapusPertama = hewan.shift();
+        document.getElementById("hapusPertama").innerHTML =
+          "Hewan pertama yang dihapus: " + hewanHapusPertama;
+
+        // Menampilkan panjang array
+        document.getElementById("panjang").innerHTML =
+          "Panjang array sekarang: " + hewan.length;
+
+        // Menampilkan semua hewan yang tersisa dalam array
+        document.getElementById("semuaHewan").innerHTML =
+          "Hewan tersisa: " + hewan.join(", ");
+      }
+    </script>
+  </body>
+</html>

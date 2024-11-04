@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Div pertama dengan id myDiv -->
+    <div id="myDiv">Hello, World!</div>
+
+    <!-- Gambar dengan id myImage -->
+    <img id="myImage" src="../image/gambar1.jpg" alt="Gambar Awal" />
+
+    <!-- Div kedua, id diubah menjadi myDiv2 agar unik -->
+    <div
+      id="myDiv2"
+      style="width: 100px; height: 100px; background-color: aquamarine"
+    >
+      contoh elemen
+    </div>
+
+    <script>
+      // Mengubah teks konten dari elemen dengan id 'myDiv'
+      let myDiv = document.getElementById("myDiv");
+      myDiv.textContent = "Hello, JavaScript!";
+
+      // Mengubah atribut src dan alt pada elemen gambar dengan id 'myImage'
+      document
+        .getElementById("myImage")
+        .setAttribute("src", "../image/gambar1.jpg");
+      document.getElementById("myImage").setAttribute("alt", "gambar kedua");
+
+      // Mengubah konten dari div kedua (myDiv2)
+      let div = document.getElementById("myDiv");
+      div.style.backgroundColor = "lightGreen";
+      div.style.width = "200px";
+      div, (style.height = "200px");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event heading submit</title>
+    <script>
+      // Function to validate the form
+      function validasiForm() {
+        var nama = document.getElementById("nama").value;
+
+        // Check if the "Nama" field is empty
+        if (nama == "") {
+          alert("Nama harus diisi GOK.");
+          return false; // Prevent form submission
+        }
+
+        // Show a personalized alert with the name entered
+        alert("Selamat Datang, " + nama + ", See You");
+        return true; // Allow form submission
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Formulir Pendaftaran</h2>
+
+    <!-- Form with onsubmit event triggering validation -->
+    <form onsubmit="return validasiForm()">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" />
+      <br /><br />
+      <input type="submit" value="Kirim" />
+    </form>
+  </body>
+</html>
